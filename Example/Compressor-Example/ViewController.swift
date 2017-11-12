@@ -8,19 +8,46 @@
 
 import UIKit
 import Compressor
+import Pageboy
 
 class ViewController: CompressorViewController {
 
+    var viewControllers = [
+        UIViewController(),
+        UIViewController(),
+        UIViewController(),
+        UIViewController()
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        bar.items = viewControllers.flatMap({ (viewController) -> Item? in
+            let index = self.viewControllers.index(of: viewController)
+            return Item(title: "Page \((index ?? 0) + 1)")
+        })
+        
+        self.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
+extension ViewController: PageboyViewControllerDataSource {
+    
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+        return viewControllers.count
+    }
+    
+    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+        return viewControllers[index]
+    }
+    
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+        return nil
+    }
 }
 
