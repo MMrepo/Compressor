@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Compressor
 
-class ViewController: UIViewController {
+class ViewController: CompressorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

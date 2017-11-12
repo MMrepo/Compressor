@@ -10,6 +10,7 @@
 		46FBAF471FB8C051003A1342 /* Compressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FBAF3D1FB8C051003A1342 /* Compressor.framework */; };
 		46FBAF4C1FB8C051003A1342 /* CompressorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF4B1FB8C051003A1342 /* CompressorTests.swift */; };
 		46FBAF4E1FB8C051003A1342 /* Compressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FBAF401FB8C051003A1342 /* Compressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46FBAF771FB8C2F7003A1342 /* CompressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		46FBAF461FB8C051003A1342 /* CompressorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompressorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FBAF4B1FB8C051003A1342 /* CompressorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressorTests.swift; sourceTree = "<group>"; };
 		46FBAF4D1FB8C051003A1342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				46FBAF401FB8C051003A1342 /* Compressor.h */,
+				46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */,
 				46FBAF411FB8C051003A1342 /* Info.plist */,
 			);
 			path = Compressor;
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					46FBAF3C1FB8C051003A1342 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					46FBAF451FB8C051003A1342 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FBAF771FB8C2F7003A1342 /* CompressorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 		46FBAF521FB8C051003A1342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uias.Compressor;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +361,7 @@
 		46FBAF531FB8C051003A1342 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +382,7 @@
 		46FBAF551FB8C051003A1342 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompressorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +396,7 @@
 		46FBAF561FB8C051003A1342 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CompressorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
