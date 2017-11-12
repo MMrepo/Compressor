@@ -6,6 +6,6 @@ target 'Compressor-Example' do
     project 'Example/Compressor-Example'
     use_frameworks!
   
-    pod 'Compressor', :path => './Compressor.podspec'
+    pod 'Compressor', :path => './'
   
   end
