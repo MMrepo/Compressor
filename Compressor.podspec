@@ -19,5 +19,6 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/Compressor/**/*.{h,m,swift}"
 
   s.dependency 'Tabman', '~> 1.0'
+  s.dependency 'PureLayout', '~> 3.0'
 
 end
