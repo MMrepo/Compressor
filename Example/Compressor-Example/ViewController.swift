@@ -12,15 +12,17 @@ import Pageboy
 
 class ViewController: CompressorViewController {
 
-    var viewControllers = [
-        UIViewController(),
-        UIViewController(),
-        UIViewController(),
-        UIViewController()
-    ]
+    var viewControllers: [UIViewController]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        viewControllers = [
+            storyboard.instantiateViewController(withIdentifier: "ChildViewController"),
+            storyboard.instantiateViewController(withIdentifier: "ChildViewController"),
+            storyboard.instantiateViewController(withIdentifier: "ChildViewController")
+        ]
         
         bar.items = viewControllers.flatMap({ (viewController) -> Item? in
             let index = self.viewControllers.index(of: viewController)

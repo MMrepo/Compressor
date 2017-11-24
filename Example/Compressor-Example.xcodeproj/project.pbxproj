@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4653DD6A1FC85C9F00C4B758 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653DD691FC85C9F00C4B758 /* ChildViewController.swift */; };
 		46FBAF651FB8C078003A1342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF641FB8C078003A1342 /* AppDelegate.swift */; };
 		46FBAF671FB8C078003A1342 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF661FB8C078003A1342 /* ViewController.swift */; };
 		46FBAF6A1FB8C078003A1342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46FBAF681FB8C078003A1342 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4653DD691FC85C9F00C4B758 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		46FBAF611FB8C078003A1342 /* Compressor-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compressor-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FBAF641FB8C078003A1342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46FBAF661FB8C078003A1342 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				46FBAF641FB8C078003A1342 /* AppDelegate.swift */,
 				46FBAF661FB8C078003A1342 /* ViewController.swift */,
+				4653DD691FC85C9F00C4B758 /* ChildViewController.swift */,
 				46FBAF681FB8C078003A1342 /* Main.storyboard */,
 				46FBAF6B1FB8C078003A1342 /* Assets.xcassets */,
 				46FBAF6D1FB8C078003A1342 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 			files = (
 				46FBAF671FB8C078003A1342 /* ViewController.swift in Sources */,
 				46FBAF651FB8C078003A1342 /* AppDelegate.swift in Sources */,
+				4653DD6A1FC85C9F00C4B758 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

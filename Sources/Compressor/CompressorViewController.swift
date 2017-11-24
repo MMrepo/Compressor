@@ -52,4 +52,14 @@ open class CompressorViewController: TabmanViewController {
             appearance.layout.extendBackgroundEdgeInsets = false
         })
     }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if #available(iOS 11, *), additionalSafeAreaInsets.top < 300 {
+            var additionalSafeAreaInsets = self.additionalSafeAreaInsets
+            additionalSafeAreaInsets.top += 300
+            self.additionalSafeAreaInsets = additionalSafeAreaInsets
+        }
+    }
 }
