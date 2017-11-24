@@ -1,9 +1,10 @@
 PODS:
   - Compressor (0.1.0):
+    - PureLayout (~> 3.0)
     - Tabman (~> 1.0)
-  - Pageboy (2.0.4)
+  - Pageboy (2.1.0)
   - PureLayout (3.0.2)
-  - Tabman (1.0.6):
+  - Tabman (1.1.0):
     - Pageboy (~> 2.0)
     - PureLayout (~> 3.0)
 
@@ -15,10 +16,10 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  Compressor: 0992e3143ad12a37c3e26133e7d5c8d1d977f8cd
-  Pageboy: 5970f6138b035380fd633b1813b7cc056784b784
+  Compressor: f25b2815524253e0887176c0fcb188c8b4b79ace
+  Pageboy: f137e98cdb92c1913401d9d3c8888951ff81a630
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Tabman: fed9956605013d0146e8b6cddbcca776078fd1ed
+  Tabman: 1f8ef92a7e249d06cdb03e6ce3ee54da4780ee6b
 
 PODFILE CHECKSUM: 11847f5cfa9747cc560737207786dd5094eaa585
 
