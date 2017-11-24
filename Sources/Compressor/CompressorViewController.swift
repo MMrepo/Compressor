@@ -26,7 +26,9 @@ open class CompressorViewController: TabmanViewController {
         view.backgroundColor = .blue
         return view
     }()
-        
+    
+    private var compressorAdditionalInset: CGFloat = 0.0
+    
     // MARK: Lifecycle
     
     open override func viewDidLoad() {
@@ -41,16 +43,6 @@ open class CompressorViewController: TabmanViewController {
         bar.appearance = TabmanBar.Appearance({ (appearance) in
             appearance.layout.extendBackgroundEdgeInsets = false
         })        
-    }
-    
-    open override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if #available(iOS 11, *), additionalSafeAreaInsets.top < 300 {
-            var additionalSafeAreaInsets = self.additionalSafeAreaInsets
-            additionalSafeAreaInsets.top += 300
-            self.additionalSafeAreaInsets = additionalSafeAreaInsets
-        }
     }
     
     // MARK: Layout
