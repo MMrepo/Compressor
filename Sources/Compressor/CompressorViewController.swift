@@ -20,37 +20,27 @@ open class CompressorViewController: TabmanViewController {
         stackView.axis = .vertical
         return stackView
     }()
-    private var headerContentView: UIView = {
-        let view = UIView()
-        // TODO - Remove
-        view.backgroundColor = .red
-        view.autoSetDimension(.height, toSize: 300.0)
-        return view
-    }()
+    internal let headerContentView = UIView()
     private var barContentView: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
         return view
     }()
-    
+        
     // MARK: Lifecycle
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO - Do this properly
-        view.addSubview(headerStackView)
-        headerStackView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        layoutHeaderComponents(in: view)
 
         embedBar(in: barContentView)
-        
-        headerStackView.addArrangedSubview(headerContentView)
-        headerStackView.addArrangedSubview(barContentView)
+
         
         // TODO - Fix this in Tabman
         bar.appearance = TabmanBar.Appearance({ (appearance) in
             appearance.layout.extendBackgroundEdgeInsets = false
-        })
+        })        
     }
     
     open override func viewDidLayoutSubviews() {
@@ -61,5 +51,16 @@ open class CompressorViewController: TabmanViewController {
             additionalSafeAreaInsets.top += 300
             self.additionalSafeAreaInsets = additionalSafeAreaInsets
         }
+    }
+    
+    // MARK: Layout
+    
+    private func layoutHeaderComponents(in view: UIView) {
+        
+        view.addSubview(headerStackView)
+        headerStackView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        
+        headerStackView.addArrangedSubview(headerContentView)
+        headerStackView.addArrangedSubview(barContentView)
     }
 }

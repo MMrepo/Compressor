@@ -10,19 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Parent View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Compressor_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ParentViewController" customModule="Compressor_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="GAM-cZ-tEl" kind="custom" identifier="EmbedHeader" customClass="CompressorEmbedHeaderSegue" customModule="Compressor" id="eZs-jb-2o9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-86" y="568"/>
         </scene>
         <!--Child View Controller-->
         <scene sceneID="pmk-yv-0l9">
@@ -53,7 +57,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4n9-z6-V8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="659"/>
+            <point key="canvasLocation" x="778" y="884"/>
+        </scene>
+        <!--Compressor Header View Controller-->
+        <scene sceneID="v2V-HS-4WG">
+            <objects>
+                <viewController id="GAM-cZ-tEl" customClass="CompressorHeaderViewController" customModule="Compressor" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woT-AT-abN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IP-82-Lxn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELb-2W-LEE">
+                                        <rect key="frame" x="159" y="190" width="56" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="7lj-MA-WxC"/>
+                                    <constraint firstItem="ELb-2W-LEE" firstAttribute="centerY" secondItem="4IP-82-Lxn" secondAttribute="centerY" id="Obu-mI-G8e"/>
+                                    <constraint firstItem="ELb-2W-LEE" firstAttribute="centerX" secondItem="4IP-82-Lxn" secondAttribute="centerX" id="oq4-8e-0KL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QKf-DV-IPt" firstAttribute="trailing" secondItem="4IP-82-Lxn" secondAttribute="trailing" id="FuR-Cc-eS4"/>
+                            <constraint firstItem="4IP-82-Lxn" firstAttribute="top" secondItem="QKf-DV-IPt" secondAttribute="top" id="GSd-cg-8nn"/>
+                            <constraint firstItem="QKf-DV-IPt" firstAttribute="bottom" secondItem="4IP-82-Lxn" secondAttribute="bottom" id="WM6-ly-MDP"/>
+                            <constraint firstItem="4IP-82-Lxn" firstAttribute="leading" secondItem="QKf-DV-IPt" secondAttribute="leading" id="jHr-uY-3Sc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QKf-DV-IPt"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L72-Pn-i1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="298"/>
         </scene>
     </scenes>
 </document>

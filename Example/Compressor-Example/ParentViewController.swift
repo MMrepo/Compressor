@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CompressorViewController.swift
 //  Compressor-Example
 //
 //  Created by Merrick Sapsford on 12/11/2017.
@@ -10,7 +10,7 @@ import UIKit
 import Compressor
 import Pageboy
 
-class ViewController: CompressorViewController {
+class ParentViewController: CompressorViewController {
 
     var viewControllers: [UIViewController]!
     
@@ -30,6 +30,8 @@ class ViewController: CompressorViewController {
         })
         
         self.dataSource = self
+        
+        embedHeader(segueIdentifier: "EmbedHeader")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +40,7 @@ class ViewController: CompressorViewController {
     }
 }
 
-extension ViewController: PageboyViewControllerDataSource {
+extension ParentViewController: PageboyViewControllerDataSource {
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllers.count
