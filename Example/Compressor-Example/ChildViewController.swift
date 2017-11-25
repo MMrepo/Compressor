@@ -8,8 +8,28 @@
 
 import UIKit
 
-class ChildViewController: UIViewController {
+class ChildViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        }
+        
+        cell.textLabel?.text = "Row \(indexPath.row)"
+        
+        return cell
+    }
 }
