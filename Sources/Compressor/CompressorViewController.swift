@@ -30,6 +30,12 @@ open class CompressorViewController: TabmanViewController {
     private var compressorAdditionalInset: CGFloat = 0.0
     
     // MARK: Lifecycle
+
+    open override func loadView() {
+        super.loadView()
+        
+        automaticallyAdjustsChildScrollViewInsets = false
+    }
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +43,6 @@ open class CompressorViewController: TabmanViewController {
         layoutHeaderComponents(in: view)
 
         embedBar(in: barContentView)
-
         
         // TODO - Fix this in Tabman
         bar.appearance = TabmanBar.Appearance({ (appearance) in
