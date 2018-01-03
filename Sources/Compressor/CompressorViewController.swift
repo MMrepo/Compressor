@@ -29,6 +29,8 @@ open class CompressorViewController: TabmanViewController {
     
     private var compressorAdditionalInset: CGFloat = 0.0
     
+    private lazy var scrollObservationService = ScrollObservationService()
+    
     // MARK: Lifecycle
 
     open override func loadView() {
@@ -54,5 +56,34 @@ open class CompressorViewController: TabmanViewController {
         
         headerStackView.addArrangedSubview(headerContentView)
         headerStackView.addArrangedSubview(barContentView)
+    }
+    
+    // MARK: PageboyViewControllerDelegate
+    
+    open override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                      didScrollToPageAt index: Int,
+                                      direction: PageboyViewController.NavigationDirection,
+                                      animated: Bool) {
+        super.pageboyViewController(pageboyViewController,
+                                    didScrollToPageAt: index,
+                                    direction: direction,
+                                    animated: animated)
+        if let currentViewController = pageboyViewController.currentViewController {
+            didMoveToNewChildViewController(currentViewController)
+        }
+    }
+    
+    open override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                             didReloadWith currentViewController: UIViewController,
+                                             currentPageIndex: PageboyViewController.PageIndex) {
+        super.pageboyViewController(pageboyViewController,
+                                    didReloadWith: currentViewController,
+                                    currentPageIndex: currentPageIndex)
+        didMoveToNewChildViewController(currentViewController)
+    }
+    
+    private func didMoveToNewChildViewController(_ childViewController: UIViewController) {
+        scrollObservationService.unregister(viewControllers: scrollObservationService.registrations)
+        scrollObservationService.register(viewControllers: [childViewController])
     }
 }

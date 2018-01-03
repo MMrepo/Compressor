@@ -33,3 +33,10 @@ class ChildViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 }
+
+extension ChildViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("didScroll: \(scrollView.contentOffset)")
+    }
+}
