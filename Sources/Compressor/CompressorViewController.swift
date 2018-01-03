@@ -34,7 +34,7 @@ open class CompressorViewController: TabmanViewController {
     open override func loadView() {
         super.loadView()
         
-        automaticallyAdjustsChildScrollViewInsets = false
+        automaticallyAdjustsChildViewInsets = false
     }
     
     open override func viewDidLoad() {
@@ -43,11 +43,6 @@ open class CompressorViewController: TabmanViewController {
         layoutHeaderComponents(in: view)
 
         embedBar(in: barContentView)
-        
-        // TODO - Fix this in Tabman
-        bar.appearance = TabmanBar.Appearance({ (appearance) in
-            appearance.layout.extendBackgroundEdgeInsets = false
-        })        
     }
     
     // MARK: Layout
