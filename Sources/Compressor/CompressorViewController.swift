@@ -36,6 +36,8 @@ open class CompressorViewController: TabmanViewController {
     open override func loadView() {
         super.loadView()
         
+        scrollObservationService.add(listener: self)
+        
         automaticallyAdjustsChildViewInsets = false
     }
     
@@ -85,5 +87,15 @@ open class CompressorViewController: TabmanViewController {
     private func didMoveToNewChildViewController(_ childViewController: UIViewController) {
         scrollObservationService.unregister(viewControllers: scrollObservationService.registrations)
         scrollObservationService.register(viewControllers: [childViewController])
+    }
+}
+
+extension CompressorViewController: ScrollObservationServiceListenable {
+    
+    func scrollObservationService(_ service: ScrollObservationService,
+                                  didObserveOffsetChangeFor viewController: UIViewController,
+                                  on scrollView: UIScrollView,
+                                  contentOffset: CGPoint) {
+        // TODO - Handle offset changes
     }
 }

@@ -1,7 +1,9 @@
 PODS:
   - Compressor (0.1.0):
+    - Listenable (~> 2.0)
     - PureLayout (~> 3.0)
     - Tabman (~> 1.0)
+  - Listenable (2.1.0)
   - Pageboy (2.2.0)
   - PureLayout (3.0.2)
   - Tabman (1.2.0):
@@ -16,7 +18,8 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  Compressor: f25b2815524253e0887176c0fcb188c8b4b79ace
+  Compressor: 601eaee8af3319913a259db1320682a2c2f2dd3b
+  Listenable: 6d19ccedd242f37d86bd7e49db955210ed01d2fd
   Pageboy: 50db8fffaa6d4d004249b7b6b19e33464dd7505b
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Tabman: 5951d9c5bc4e438e1c82b7e59e5cdc9f505c1431

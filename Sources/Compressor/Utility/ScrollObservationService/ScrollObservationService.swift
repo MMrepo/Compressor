@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import Listenable
 
-internal class ScrollObservationService {
+internal protocol ScrollObservationServiceListenable {
+    
+    func scrollObservationService(_ service: ScrollObservationService,
+                                  didObserveOffsetChangeFor viewController: UIViewController,
+                                  on scrollView: UIScrollView,
+                                  contentOffset: CGPoint)
+}
+
+internal class ScrollObservationService: Listenable<ScrollObservationServiceListenable> {
     
     private(set) lazy var registrations = [UIViewController]()
     private var tokens = [Int: NSKeyValueObservation?]()
@@ -44,7 +53,12 @@ internal class ScrollObservationService {
         let viewController = registration
         for scrollView in viewController.view.scrollViewSubviews {
             let token = scrollView.observe(\.contentOffset, changeHandler: { (scrollView, change) in
-                // Handle new offset
+                self.updateListeners({ (listener, _) in
+                    listener.scrollObservationService(self,
+                                                      didObserveOffsetChangeFor: viewController,
+                                                      on: scrollView,
+                                                      contentOffset: scrollView.contentOffset)
+                })
             })
             tokens[viewController.hash] = token
         }

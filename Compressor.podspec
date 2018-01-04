@@ -20,5 +20,6 @@ Pod::Spec.new do |s|
 
   s.dependency 'Tabman', '~> 1.0'
   s.dependency 'PureLayout', '~> 3.0'
+  s.dependency 'Listenable', '~> 2.0'
 
 end
