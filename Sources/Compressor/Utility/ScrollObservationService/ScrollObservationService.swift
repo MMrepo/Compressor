@@ -10,6 +10,7 @@ import UIKit
 internal class ScrollObservationService {
     
     private(set) lazy var registrations = [UIViewController]()
+    private var tokens = [Int: NSKeyValueObservation?]()
     
     // MARK: Registration
     
@@ -35,13 +36,17 @@ internal class ScrollObservationService {
     // MARK: Evaluation
     
     private func unhook(registration: UIViewController) {
-        
+        let viewController = registration
+        tokens.removeValue(forKey: viewController.hash)
     }
     
     private func hook(registration: UIViewController) {
         let viewController = registration
-        viewController.view.scrollViewSubviews.forEach { (scrollView) in
-            
+        for scrollView in viewController.view.scrollViewSubviews {
+            let token = scrollView.observe(\.contentOffset, changeHandler: { (scrollView, change) in
+                // Handle new offset
+            })
+            tokens[viewController.hash] = token
         }
     }
 }
