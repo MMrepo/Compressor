@@ -83,14 +83,15 @@ open class CompressorViewController: TabmanViewController {
                                     currentPageIndex: currentPageIndex)
         didMoveToNewChildViewController(currentViewController)
     }
+}
+
+// MARK: - Scroll Observation
+extension CompressorViewController: ScrollObservationServiceListenable {
     
     private func didMoveToNewChildViewController(_ childViewController: UIViewController) {
         scrollObservationService.unregister(viewControllers: scrollObservationService.registrations)
         scrollObservationService.register(viewControllers: [childViewController])
     }
-}
-
-extension CompressorViewController: ScrollObservationServiceListenable {
     
     func scrollObservationService(_ service: ScrollObservationService,
                                   didObserveOffsetChangeFor viewController: UIViewController,
