@@ -6,7 +6,7 @@ PODS:
   - Listenable (2.1.0)
   - Pageboy (2.3.1)
   - PureLayout (3.0.2)
-  - Tabman (1.3.0):
+  - Tabman (1.4.0):
     - Pageboy (~> 2.3.0)
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ SPEC CHECKSUMS:
   Listenable: 6d19ccedd242f37d86bd7e49db955210ed01d2fd
   Pageboy: 761f33cb03c8ef27c69b803be1bccd04b71c80d1
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Tabman: 9ea3ea63af82a8979c4be48c11abde9cc7dbef4f
+  Tabman: 348ff2d3fc88587ef60bae5bce6698a8e1984cc2
 
 PODFILE CHECKSUM: 138f0a667c478753ee68cf59f0e16b9efef3950b
 
