@@ -37,6 +37,6 @@ class ChildViewController: UIViewController, UITableViewDataSource {
 extension ChildViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("didScroll: \(scrollView.contentOffset)")
+//        print("didScroll: \(scrollView.contentOffset)")
     }
 }

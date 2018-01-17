@@ -39,8 +39,6 @@ open class CompressorViewController: TabmanViewController {
         super.loadView()
         
         scrollObservationService.add(listener: self)
-        
-        automaticallyAdjustsChildViewInsets = false
     }
     
     open override func viewDidLoad() {

@@ -12,19 +12,14 @@ PODS:
     - Pageboy (~> 2.3.0)
 
 DEPENDENCIES:
-  - AutoInsetter (from `https://github.com/uias/AutoInsetter`)
+  - AutoInsetter (from `../AutoInsetter`)
   - Compressor (from `./`)
 
 EXTERNAL SOURCES:
   AutoInsetter:
-    :git: https://github.com/uias/AutoInsetter
+    :path: ../AutoInsetter
   Compressor:
     :path: ./
-
-CHECKOUT OPTIONS:
-  AutoInsetter:
-    :commit: 1cd559c9150d808a9eb9b631582e2b0760ebaaf9
-    :git: https://github.com/uias/AutoInsetter
 
 SPEC CHECKSUMS:
   AutoInsetter: 17798a495033caeb5e30a5c87675dad8f75dc2ba
@@ -34,6 +29,6 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Tabman: 348ff2d3fc88587ef60bae5bce6698a8e1984cc2
 
-PODFILE CHECKSUM: 05c54e5a73e2d22c05cc8a9d4316e3d49b553e3f
+PODFILE CHECKSUM: 9de2e5993f137597b8affd01593419e10b7a52b0
 
 COCOAPODS: 1.3.1
