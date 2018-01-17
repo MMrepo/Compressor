@@ -7,5 +7,6 @@ target 'Compressor-Example' do
     use_frameworks!
   
     pod 'Compressor', :path => './'
+    pod 'AutoInsetter', :git => 'https://github.com/uias/AutoInsetter'
   
   end

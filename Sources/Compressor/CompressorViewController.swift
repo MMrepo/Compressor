@@ -49,6 +49,11 @@ open class CompressorViewController: TabmanViewController {
         embedBar(in: barContentView)
     }
     
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+    }
+    
     // MARK: Layout
     
     private func layoutHeaderComponents(in view: UIView) {
