@@ -9,6 +9,7 @@
 import UIKit
 import Tabman
 import Pageboy
+import AutoInsetter
 import PureLayout
 
 open class CompressorViewController: TabmanViewController {
@@ -30,6 +31,7 @@ open class CompressorViewController: TabmanViewController {
     private var compressorAdditionalInset: CGFloat = 0.0
     
     private lazy var scrollObservationService = ScrollObservationService()
+    internal lazy var autoInsetter = AutoInsetter()
     
     // MARK: Lifecycle
 
@@ -51,7 +53,7 @@ open class CompressorViewController: TabmanViewController {
     
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        setNeedsAutoInsetUpdate(for: currentViewController)
     }
     
     // MARK: Layout
