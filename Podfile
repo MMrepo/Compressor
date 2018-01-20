@@ -7,7 +7,8 @@ target 'Compressor-Example' do
     use_frameworks!
   
     pod 'Compressor', :path => './'
-    # pod 'AutoInsetter', :git => 'https://github.com/uias/AutoInsetter'
-    pod 'AutoInsetter', :path => '../AutoInsetter' 
+    
+    pod 'AutoInsetter', :git => 'https://github.com/uias/AutoInsetter'
+    pod 'Tabman', :git => 'https://github.com/uias/Tabman', :branch => 'feature/autoinset-framework'
   
   end
