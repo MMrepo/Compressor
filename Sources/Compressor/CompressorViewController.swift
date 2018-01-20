@@ -38,6 +38,8 @@ open class CompressorViewController: TabmanViewController {
     open override func loadView() {
         super.loadView()
         
+        automaticallyAdjustsChildViewInsets = false
+        
         scrollObservationService.add(listener: self)
     }
     
@@ -66,6 +68,19 @@ open class CompressorViewController: TabmanViewController {
     }
     
     // MARK: PageboyViewControllerDelegate
+    
+    open override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                             willScrollToPageAt index: Int,
+                                             direction: PageboyViewController.NavigationDirection,
+                                             animated: Bool) {
+        super.pageboyViewController(pageboyViewController,
+                                    willScrollToPageAt: index,
+                                    direction: direction,
+                                    animated: animated)
+        
+        let newViewController = dataSource?.viewController(for: pageboyViewController, at: index)
+        setNeedsAutoInsetUpdate(for: newViewController)
+    }
     
     open override func pageboyViewController(_ pageboyViewController: PageboyViewController,
                                       didScrollToPageAt index: Int,
