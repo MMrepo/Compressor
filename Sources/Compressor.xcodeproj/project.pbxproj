@@ -12,6 +12,7 @@
 		4618F9881FC993EA00188D14 /* CompressorViewController+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618F9851FC993EA00188D14 /* CompressorViewController+Embedding.swift */; };
 		464AD773200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */; };
 		467E92B21FFD28ED002204C4 /* ScrollObservationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E92B11FFD28ED002204C4 /* ScrollObservationService.swift */; };
+		46DD6E2D2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DD6E2C2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift */; };
 		46FBAF471FB8C051003A1342 /* Compressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46FBAF3D1FB8C051003A1342 /* Compressor.framework */; };
 		46FBAF4C1FB8C051003A1342 /* CompressorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF4B1FB8C051003A1342 /* CompressorTests.swift */; };
 		46FBAF4E1FB8C051003A1342 /* Compressor.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FBAF401FB8C051003A1342 /* Compressor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,7 @@
 		4618F9851FC993EA00188D14 /* CompressorViewController+Embedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CompressorViewController+Embedding.swift"; sourceTree = "<group>"; };
 		464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompressorViewController+AutoInsetting.swift"; sourceTree = "<group>"; };
 		467E92B11FFD28ED002204C4 /* ScrollObservationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollObservationService.swift; sourceTree = "<group>"; };
+		46DD6E2C2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompressorViewController+Compression.swift"; sourceTree = "<group>"; };
 		46FBAF3D1FB8C051003A1342 /* Compressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Compressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FBAF401FB8C051003A1342 /* Compressor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Compressor.h; sourceTree = "<group>"; };
 		46FBAF411FB8C051003A1342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				46FBAF401FB8C051003A1342 /* Compressor.h */,
 				46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */,
 				464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */,
+				46DD6E2C2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift */,
 				4618F9821FC993EA00188D14 /* Header */,
 				467E92AF1FFD28ED002204C4 /* Utility */,
 				46FBAF411FB8C051003A1342 /* Info.plist */,
@@ -245,6 +248,7 @@
 				467E92B21FFD28ED002204C4 /* ScrollObservationService.swift in Sources */,
 				4618F9861FC993EA00188D14 /* CompressorHeaderViewController.swift in Sources */,
 				46FBAF771FB8C2F7003A1342 /* CompressorViewController.swift in Sources */,
+				46DD6E2D2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

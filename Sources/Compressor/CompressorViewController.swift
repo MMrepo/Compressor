@@ -16,6 +16,7 @@ open class CompressorViewController: TabmanViewController {
     
     // MARK: Properties
     
+    internal let headerContainerView = UIView()
     private var headerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -28,8 +29,6 @@ open class CompressorViewController: TabmanViewController {
         return view
     }()
     
-    private var compressorAdditionalInset: CGFloat = 0.0
-    
     private lazy var scrollObservationService = ScrollObservationService()
     internal lazy var autoInsetter = AutoInsetter()
     
@@ -38,6 +37,7 @@ open class CompressorViewController: TabmanViewController {
     open override func loadView() {
         super.loadView()
         
+        automaticallyAdjustsScrollViewInsets = false
         automaticallyAdjustsChildViewInsets = false
         
         scrollObservationService.add(listener: self)
@@ -60,8 +60,11 @@ open class CompressorViewController: TabmanViewController {
     
     private func layoutHeaderComponents(in view: UIView) {
         
-        view.addSubview(headerStackView)
-        headerStackView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        view.addSubview(headerContainerView)
+        headerContainerView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        
+        headerContainerView.addSubview(headerStackView)
+        headerStackView.autoPinEdgesToSuperviewEdges()
         
         headerStackView.addArrangedSubview(headerContentView)
         headerStackView.addArrangedSubview(barContentView)

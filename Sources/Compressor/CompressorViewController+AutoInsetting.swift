@@ -14,8 +14,9 @@ internal extension CompressorViewController {
     func setNeedsAutoInsetUpdate(for childViewController: UIViewController?) {
         view.layoutIfNeeded()
         
-        let headerInsets = UIEdgeInsets(top: headerContentView.bounds.height, left: 0.0, bottom: 0.0, right: 0.0)
-        let allInsets = UIEdgeInsets(top: headerContentView.bounds.height + viewLayoutInsets.top, left: 0.0, bottom: 0.0, right: 0.0)
+        let headerContainer = headerContainerView
+        let headerInsets = UIEdgeInsets(top: headerContainer.bounds.height - viewLayoutInsets.top, left: 0.0, bottom: 0.0, right: 0.0)
+        let allInsets = UIEdgeInsets(top: headerContainer.bounds.height, left: 0.0, bottom: 0.0, right: 0.0)
         
         let spec = CompressorInsetSpec(additionalRequiredInsets: headerInsets,
                                        allRequiredInsets: allInsets)
