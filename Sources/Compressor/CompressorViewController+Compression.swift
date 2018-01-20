@@ -10,5 +10,13 @@ import UIKit
 
 internal extension CompressorViewController {
     
-    
+    func updateCompression(for scrollOffset: CGPoint,
+                           from viewController: UIViewController) {
+        guard viewController === self.currentViewController else {
+            return
+        }
+        
+        let headerHeight = headerContainerView.bounds.height
+        headerTopPin.constant = min(-(headerHeight + scrollOffset.y), 0.0)
+    }
 }

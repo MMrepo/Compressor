@@ -29,6 +29,8 @@ open class CompressorViewController: TabmanViewController {
         return view
     }()
     
+    internal var headerTopPin: NSLayoutConstraint!
+    
     private lazy var scrollObservationService = ScrollObservationService()
     internal lazy var autoInsetter = AutoInsetter()
     
@@ -61,7 +63,7 @@ open class CompressorViewController: TabmanViewController {
     private func layoutHeaderComponents(in view: UIView) {
         
         view.addSubview(headerContainerView)
-        headerContainerView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        headerTopPin = headerContainerView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)[0]
         
         headerContainerView.addSubview(headerStackView)
         headerStackView.autoPinEdgesToSuperviewEdges()
@@ -120,6 +122,6 @@ extension CompressorViewController: ScrollObservationServiceListenable {
                                   didObserveOffsetChangeFor viewController: UIViewController,
                                   on scrollView: UIScrollView,
                                   contentOffset: CGPoint) {
-        // TODO - Handle offset changes
+        updateCompression(for: contentOffset, from: viewController)
     }
 }
