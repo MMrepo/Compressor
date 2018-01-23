@@ -87,13 +87,21 @@
                                     <constraint firstItem="ELb-2W-LEE" firstAttribute="centerX" secondItem="4IP-82-Lxn" secondAttribute="centerX" id="oq4-8e-0KL"/>
                                 </constraints>
                             </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deL-5Q-0wU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <color key="backgroundColor" red="1" green="0.011367673219544239" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QKf-DV-IPt" firstAttribute="trailing" secondItem="4IP-82-Lxn" secondAttribute="trailing" id="FuR-Cc-eS4"/>
-                            <constraint firstItem="4IP-82-Lxn" firstAttribute="top" secondItem="QKf-DV-IPt" secondAttribute="top" id="GSd-cg-8nn"/>
-                            <constraint firstItem="QKf-DV-IPt" firstAttribute="bottom" secondItem="4IP-82-Lxn" secondAttribute="bottom" id="WM6-ly-MDP"/>
-                            <constraint firstItem="4IP-82-Lxn" firstAttribute="leading" secondItem="QKf-DV-IPt" secondAttribute="leading" id="jHr-uY-3Sc"/>
+                            <constraint firstItem="QKf-DV-IPt" firstAttribute="trailing" secondItem="deL-5Q-0wU" secondAttribute="trailing" id="3q0-HM-S8i"/>
+                            <constraint firstItem="QKf-DV-IPt" firstAttribute="bottom" secondItem="deL-5Q-0wU" secondAttribute="bottom" id="69C-bB-olz"/>
+                            <constraint firstItem="deL-5Q-0wU" firstAttribute="leading" secondItem="QKf-DV-IPt" secondAttribute="leading" id="FGJ-he-lY8"/>
+                            <constraint firstAttribute="trailing" secondItem="4IP-82-Lxn" secondAttribute="trailing" id="FuR-Cc-eS4"/>
+                            <constraint firstItem="4IP-82-Lxn" firstAttribute="top" secondItem="woT-AT-abN" secondAttribute="top" id="GSd-cg-8nn"/>
+                            <constraint firstAttribute="bottom" secondItem="4IP-82-Lxn" secondAttribute="bottom" id="WM6-ly-MDP"/>
+                            <constraint firstItem="4IP-82-Lxn" firstAttribute="leading" secondItem="woT-AT-abN" secondAttribute="leading" id="jHr-uY-3Sc"/>
+                            <constraint firstItem="deL-5Q-0wU" firstAttribute="top" secondItem="QKf-DV-IPt" secondAttribute="top" id="tUr-KL-QLR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QKf-DV-IPt"/>
                     </view>
