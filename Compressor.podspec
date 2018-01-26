@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/Compressor/**/*.{h,m,swift}"
 
   s.dependency 'Tabman', '~> 1.0'
-  s.dependency 'AutoInsetter'
+  s.dependency 'AutoInsetter', '~> 1.0'
   s.dependency 'Listenable', '~> 2.0'
 
   s.dependency 'PureLayout', '~> 3.0'

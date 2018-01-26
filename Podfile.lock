@@ -1,7 +1,7 @@
 PODS:
-  - AutoInsetter (0.9.0)
+  - AutoInsetter (1.0.0)
   - Compressor (0.1.0):
-    - AutoInsetter
+    - AutoInsetter (~> 1.0)
     - Listenable (~> 2.0)
     - PureLayout (~> 3.0)
     - Tabman (~> 1.0)
@@ -9,39 +9,33 @@ PODS:
   - Pageboy (2.3.1)
   - PureLayout (3.0.2)
   - Tabman (1.4.0):
-    - AutoInsetter
+    - AutoInsetter (~> 1.0.0)
     - Pageboy (~> 2.3.0)
 
 DEPENDENCIES:
-  - AutoInsetter (from `https://github.com/uias/AutoInsetter`)
   - Compressor (from `./`)
-  - Tabman (from `https://github.com/uias/Tabman`, branch `feature/autoinset-framework`)
+  - Tabman (from `https://github.com/uias/Tabman`, branch `develop`)
 
 EXTERNAL SOURCES:
-  AutoInsetter:
-    :git: https://github.com/uias/AutoInsetter
   Compressor:
     :path: ./
   Tabman:
-    :branch: feature/autoinset-framework
+    :branch: develop
     :git: https://github.com/uias/Tabman
 
 CHECKOUT OPTIONS:
-  AutoInsetter:
-    :commit: d19509853387b8e2d7826c6604270e3a4bca994c
-    :git: https://github.com/uias/AutoInsetter
   Tabman:
-    :commit: 4e5ce362ebbb19db49d6e7700a3ced4af41d205e
+    :commit: 3218e5ac9fbac3f259edc461a90710b8f6eb0702
     :git: https://github.com/uias/Tabman
 
 SPEC CHECKSUMS:
-  AutoInsetter: 17798a495033caeb5e30a5c87675dad8f75dc2ba
-  Compressor: 1ffa39aaabae17bd795e0f73a61a0a2d7389b06c
+  AutoInsetter: c662cef9ffb391592a25d78f9109a12823b1cbb8
+  Compressor: 8f7ae5d1ca4329975c349a45d00e16aee8d3a139
   Listenable: 6d19ccedd242f37d86bd7e49db955210ed01d2fd
   Pageboy: 761f33cb03c8ef27c69b803be1bccd04b71c80d1
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Tabman: 5c932fa4f3e89b3792faa4a6aa9b8ef1b91d21d6
+  Tabman: 8240603f116b0bdc45ac55ad86235e40f713e1d8
 
-PODFILE CHECKSUM: 2e6996f90a9e74e7c8612510eab16728c202ebcb
+PODFILE CHECKSUM: f2c00bd912f8f7f5828fbce89c6e718de2a7109e
 
 COCOAPODS: 1.4.0
