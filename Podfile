@@ -7,6 +7,5 @@ target 'Compressor-Example' do
     use_frameworks!
   
     pod 'Compressor', :path => './'
-    pod 'Tabman', :git => 'https://github.com/uias/Tabman', :branch => 'develop'
   
   end

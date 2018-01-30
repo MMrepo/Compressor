@@ -1,41 +1,32 @@
 PODS:
-  - AutoInsetter (1.0.0)
+  - AutoInsetter (1.1.0)
   - Compressor (0.1.0):
-    - AutoInsetter (~> 1.0)
-    - Listenable (~> 2.0)
+    - AutoInsetter (~> 1.1.0)
+    - Listenable (~> 2.0.0)
     - PureLayout (~> 3.0)
-    - Tabman (~> 1.0)
-  - Listenable (2.1.0)
-  - Pageboy (2.3.1)
+    - Tabman (~> 1.5.0)
+  - Listenable (2.0.0)
+  - Pageboy (2.3.3)
   - PureLayout (3.0.2)
-  - Tabman (1.4.0):
-    - AutoInsetter (~> 1.0.0)
+  - Tabman (1.5.0):
+    - AutoInsetter (~> 1.1.0)
     - Pageboy (~> 2.3.0)
 
 DEPENDENCIES:
   - Compressor (from `./`)
-  - Tabman (from `https://github.com/uias/Tabman`, branch `develop`)
 
 EXTERNAL SOURCES:
   Compressor:
     :path: ./
-  Tabman:
-    :branch: develop
-    :git: https://github.com/uias/Tabman
-
-CHECKOUT OPTIONS:
-  Tabman:
-    :commit: 3218e5ac9fbac3f259edc461a90710b8f6eb0702
-    :git: https://github.com/uias/Tabman
 
 SPEC CHECKSUMS:
-  AutoInsetter: c662cef9ffb391592a25d78f9109a12823b1cbb8
-  Compressor: 8f7ae5d1ca4329975c349a45d00e16aee8d3a139
-  Listenable: 6d19ccedd242f37d86bd7e49db955210ed01d2fd
-  Pageboy: 761f33cb03c8ef27c69b803be1bccd04b71c80d1
+  AutoInsetter: ca08506cbb7c7b6b116b985c45e8573988c35090
+  Compressor: 85cec5cf1c0298baafd898220fbf0bccd0c8ad8d
+  Listenable: 6dd6d417351e82f27fd267ef2e088bcda7735075
+  Pageboy: 0ea6c85f6e6cfd4d54d427fc640a51223ca9ebc7
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Tabman: 8240603f116b0bdc45ac55ad86235e40f713e1d8
+  Tabman: 9073d30c756e1112cc26374217229d7c22226a96
 
-PODFILE CHECKSUM: f2c00bd912f8f7f5828fbce89c6e718de2a7109e
+PODFILE CHECKSUM: 138f0a667c478753ee68cf59f0e16b9efef3950b
 
 COCOAPODS: 1.4.0
