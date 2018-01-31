@@ -27,6 +27,7 @@ public extension CompressorViewController {
         headerContainer.addSubview(view)
         
         view.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: headerContainer.topAnchor),
             view.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
