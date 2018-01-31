@@ -16,7 +16,7 @@ internal extension CompressorViewController {
             return
         }
         
-        let headerHeight = headerContainerView.bounds.height
+        let headerHeight = headerView.bounds.height
         headerTopPin.constant = min(-(headerHeight + scrollOffset.y), 0.0)
     }
 }

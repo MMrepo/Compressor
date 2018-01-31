@@ -14,24 +14,24 @@ public extension CompressorViewController {
     }
     
     public func embedHeader(viewController: CompressorHeaderViewController) {
-        guard headerContentView.subviews.count == 0 else {
+        let headerContainer = headerView.viewControllerContainer
+        guard headerContainer.subviews.count == 0 else {
             fatalError("CompressorViewController already has an embedded header")
         }
         
         guard let view = viewController.view else {
             return
         }
-        let containerView = headerContentView
         
         viewController.willMove(toParentViewController: self)
-        containerView.addSubview(view)
+        headerContainer.addSubview(view)
         
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: containerView.topAnchor),
-            view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            view.topAnchor.constraint(equalTo: headerContainer.topAnchor),
+            view.leadingAnchor.constraint(equalTo: headerContainer.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: headerContainer.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: headerContainer.bottomAnchor)
             ])
         
         viewController.didMove(toParentViewController: self)

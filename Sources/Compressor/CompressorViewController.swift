@@ -16,19 +16,7 @@ open class CompressorViewController: TabmanViewController {
     
     // MARK: Properties
     
-    internal let headerContainerView = UIView()
-    private var headerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        return stackView
-    }()
-    internal let headerContentView = UIView()
-    private var barContentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .blue
-        return view
-    }()
-    
+    let headerView = CompressorHeaderView()
     internal var headerTopPin: NSLayoutConstraint!
     
     private lazy var scrollObservationService = ScrollObservationService()
@@ -50,7 +38,7 @@ open class CompressorViewController: TabmanViewController {
         
         layoutHeaderComponents(in: view)
 
-        embedBar(in: barContentView)
+        embedBar(in: headerView.tabBarContainer)
     }
     
     open override func viewDidLayoutSubviews() {
@@ -62,14 +50,8 @@ open class CompressorViewController: TabmanViewController {
     
     private func layoutHeaderComponents(in view: UIView) {
         
-        view.addSubview(headerContainerView)
-        headerTopPin = headerContainerView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)[0]
-        
-        headerContainerView.addSubview(headerStackView)
-        headerStackView.autoPinEdgesToSuperviewEdges()
-        
-        headerStackView.addArrangedSubview(headerContentView)
-        headerStackView.addArrangedSubview(barContentView)
+        view.addSubview(headerView)
+        headerTopPin = headerView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)[0]
     }
     
     // MARK: PageboyViewControllerDelegate
