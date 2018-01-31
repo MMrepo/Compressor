@@ -5,6 +5,9 @@
       location = "group:Example/Compressor-Example.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Sources/Compressor.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
