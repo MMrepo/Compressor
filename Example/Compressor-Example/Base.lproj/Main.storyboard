@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="GAM-cZ-tEl" kind="custom" identifier="EmbedHeader" customClass="CompressorEmbedHeaderSegue" customModule="Compressor" id="eZs-jb-2o9"/>
+                        <segue destination="GAM-cZ-tEl" kind="custom" identifier="EmbedHeader" customClass="CompressorHeaderEmbedSegue" customModule="Compressor" id="eZs-jb-2o9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

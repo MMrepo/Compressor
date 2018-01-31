@@ -16,7 +16,7 @@ open class CompressorViewController: TabmanViewController {
     
     // MARK: Properties
     
-    let headerView = CompressorHeaderView()
+    internal let headerView = CompressorHeaderView()
     internal var headerTopPin: NSLayoutConstraint!
     
     private lazy var scrollObservationService = ScrollObservationService()

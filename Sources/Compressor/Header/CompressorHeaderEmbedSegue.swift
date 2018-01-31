@@ -1,5 +1,5 @@
 //
-//  CompressorEmbedHeaderSegue.swift
+//  CompressorHeaderEmbedSegue.swift
 //  Compressor
 //
 //  Created by Merrick Sapsford on 24/11/2017.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class CompressorEmbedHeaderSegue: UIStoryboardSegue {
+public class CompressorHeaderEmbedSegue: UIStoryboardSegue {
  
     public override func perform() {
         guard let compressorViewController = source as? CompressorViewController else {
