@@ -2,14 +2,35 @@ platform :ios, '9.0'
  
 workspace 'Compressor'
 
+def example_pods
+
+  pod 'Compressor', :path => './'
+  lib_pods
+
+end
+
+def lib_pods
+
+  pod 'Tabman', '~> 1.5.0'
+  pod 'AutoInsetter', '~> 1.1.0'
+  pod 'Listenable', '~> 2.0.0'
+  pod 'PureLayout', '~> 3.0.0'
+
+end
+
+target 'Compressor-Example' do
+  project 'Example/Compressor-Example'
+  use_frameworks!
+
+  example_pods
+
+end
+
 target 'Compressor' do
     project 'Sources/Compressor'
     use_frameworks!
   
-    pod 'Tabman', '~> 1.5.0'
-    pod 'AutoInsetter', '~> 1.1.0'
-    pod 'Listenable', '~> 2.0.0'
-    pod 'PureLayout', '~> 3.0.0'
+    lib_pods
 
     target 'CompressorTests' do
       inherit! :search_paths
