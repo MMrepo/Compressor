@@ -32,9 +32,7 @@ internal extension CompressorViewController {
         switch boundary {
         case .stopAt(let component):
             switch component {
-                
-                // TODO - Handle header compressed state
-                
+                                
             case .tabBar:
                 return totalHeightWithSafeArea - headerView.tabBarContainer.bounds.size.height
                 

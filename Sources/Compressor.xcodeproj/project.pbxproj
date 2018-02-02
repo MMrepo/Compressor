@@ -131,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				46FBAF401FB8C051003A1342 /* Compressor.h */,
-				46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */,
 				461367DD2024A6E8008444A0 /* Compression.swift */,
+				46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */,
 				464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */,
 				46DD6E2C2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift */,
 				469175C12022541400E28582 /* CompressorViewController+Embedding.swift */,

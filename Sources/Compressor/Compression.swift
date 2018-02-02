@@ -16,7 +16,7 @@ public struct Compression {
 public extension Compression {
     
     static var `default`: Compression {
-        return Compression(boundary: .stopAt(component: .header))
+        return Compression(boundary: .stopAt(component: .tabBar))
     }
 }
 
@@ -25,7 +25,6 @@ public extension Compression {
     public enum Boundary {
         
         public enum Component {
-            case header
             case tabBar
             case none
         }
