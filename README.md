@@ -30,7 +30,7 @@ Currently a work in progress. 🤞
 - Created by [Merrick Sapsford](https://github.com/msaps) ([@MerrickSapsford](https://twitter.com/MerrickSapsford))
 
 ## ❤️ Contributing
-Bug reports and pull requests are welcome on GitHub at [https://github.com/uias/Tabman](https://github.com/uias/Tabman).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/uias/Compressor](https://github.com/uias/Compressor).
 
 ## 👮🏻‍♂️ License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
