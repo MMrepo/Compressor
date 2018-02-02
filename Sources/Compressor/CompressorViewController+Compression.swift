@@ -18,12 +18,29 @@ internal extension CompressorViewController {
         
         let headerHeight = headerView.bounds.height
         let offsetTopPin = -(headerHeight + scrollOffset.y)
-        let limitedTopPin = max(offsetTopPin, maximumHeaderTopPin(for: compression.boundary))
-        print(limitedTopPin)
+        let limitedTopPin = max(offsetTopPin, -maximumHeaderTopPin(for: compression.boundary))
         headerTopPin.constant = min(limitedTopPin, 0.0)
     }
     
     private func maximumHeaderTopPin(for boundary: Compression.Boundary) -> CGFloat {
-        return 20
+        let totalHeight = headerView.bounds.height
+        var totalHeightWithSafeArea = totalHeight
+        if #available(iOS 11, *) {
+            totalHeightWithSafeArea -= view.safeAreaInsets.top
+        }
+        
+        switch boundary {
+        case .stopAt(let component):
+            switch component {
+                
+                // TODO - Handle header compressed state
+                
+            case .tabBar:
+                return totalHeightWithSafeArea - headerView.tabBarContainer.bounds.size.height
+                
+            default:
+                return totalHeight
+            }
+        }
     }
 }
