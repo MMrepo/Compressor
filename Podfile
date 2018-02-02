@@ -2,13 +2,6 @@ platform :ios, '9.0'
  
 workspace 'Compressor'
 
-def example_pods
-
-  pod 'Compressor', :path => './'
-  lib_pods
-
-end
-
 def lib_pods
 
   pod 'Tabman', '~> 1.5.0'
@@ -22,7 +15,7 @@ target 'Compressor-Example' do
   project 'Example/Compressor-Example'
   use_frameworks!
 
-  example_pods
+  lib_pods
 
 end
 

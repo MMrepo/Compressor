@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461367E32024ABD8008444A0 /* Compressor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 461367E42024ABD8008444A0 /* Compressor.framework */; };
 		4653DD6A1FC85C9F00C4B758 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653DD691FC85C9F00C4B758 /* ChildViewController.swift */; };
 		46FBAF651FB8C078003A1342 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF641FB8C078003A1342 /* AppDelegate.swift */; };
 		46FBAF671FB8C078003A1342 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FBAF661FB8C078003A1342 /* ParentViewController.swift */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		00A7F1EADBF40C03CE62A6D2 /* Pods-Compressor-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compressor-Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Compressor-Example/Pods-Compressor-Example.release.xcconfig"; sourceTree = "<group>"; };
 		13FCF6C34D38BD768267A059 /* Pods-Compressor-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Compressor-Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Compressor-Example/Pods-Compressor-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		461367E22024ABB1008444A0 /* Compressor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Compressor.framework; sourceTree = "<group>"; };
+		461367E42024ABD8008444A0 /* Compressor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Compressor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4653DD691FC85C9F00C4B758 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		46FBAF611FB8C078003A1342 /* Compressor-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compressor-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FBAF641FB8C078003A1342 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461367E32024ABD8008444A0 /* Compressor.framework in Frameworks */,
 				674F47CF21AEA0B1E59EE33C /* Pods_Compressor_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +94,8 @@
 		DD09F3672AF2E70D7B85CACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				461367E42024ABD8008444A0 /* Compressor.framework */,
+				461367E22024ABB1008444A0 /* Compressor.framework */,
 				7E5428F5E404E8654D248998 /* Pods_Compressor_Example.framework */,
 			);
 			name = Frameworks;
@@ -199,7 +205,6 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-Compressor-Example/Pods-Compressor-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework",
-				"${BUILT_PRODUCTS_DIR}/Compressor/Compressor.framework",
 				"${BUILT_PRODUCTS_DIR}/Listenable/Listenable.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
@@ -208,7 +213,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoInsetter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Compressor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Listenable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",

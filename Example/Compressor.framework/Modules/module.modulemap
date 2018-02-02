@@ -1,0 +1,11 @@
+framework module Compressor {
+  umbrella header "Compressor.h"
+
+  export *
+  module * { export * }
+}
+
+module Compressor.Swift {
+    header "Compressor-Swift.h"
+    requires objc
+}
