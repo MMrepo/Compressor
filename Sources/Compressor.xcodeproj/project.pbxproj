@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07B72BD505C02BB6321D24D8 /* Pods_CompressorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549189D72609DA0313E3F2E0 /* Pods_CompressorTests.framework */; };
+		461367DE2024A6E8008444A0 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461367DD2024A6E8008444A0 /* Compression.swift */; };
 		4618F9861FC993EA00188D14 /* CompressorHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618F9831FC993EA00188D14 /* CompressorHeaderViewController.swift */; };
 		464AD773200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */; };
 		468AC30520225CBC00A3A437 /* CompressorHeaderEmbedSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468AC30420225CBC00A3A437 /* CompressorHeaderEmbedSegue.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		461367DD2024A6E8008444A0 /* Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compression.swift; sourceTree = "<group>"; };
 		4618F9831FC993EA00188D14 /* CompressorHeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressorHeaderViewController.swift; sourceTree = "<group>"; };
 		464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompressorViewController+AutoInsetting.swift"; sourceTree = "<group>"; };
 		468AC30420225CBC00A3A437 /* CompressorHeaderEmbedSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompressorHeaderEmbedSegue.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				46FBAF401FB8C051003A1342 /* Compressor.h */,
 				46FBAF761FB8C2F7003A1342 /* CompressorViewController.swift */,
+				461367DD2024A6E8008444A0 /* Compression.swift */,
 				464AD772200FA8C600A74FC5 /* CompressorViewController+AutoInsetting.swift */,
 				46DD6E2C2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift */,
 				469175C12022541400E28582 /* CompressorViewController+Embedding.swift */,
@@ -375,6 +378,7 @@
 				46FBAF771FB8C2F7003A1342 /* CompressorViewController.swift in Sources */,
 				469175C42022542200E28582 /* CompressorHeaderView.swift in Sources */,
 				468AC30720225CCE00A3A437 /* ScrollObservationService.swift in Sources */,
+				461367DE2024A6E8008444A0 /* Compression.swift in Sources */,
 				468AC30520225CBC00A3A437 /* CompressorHeaderEmbedSegue.swift in Sources */,
 				46DD6E2D2013AF2C00BB2AD2 /* CompressorViewController+Compression.swift in Sources */,
 			);

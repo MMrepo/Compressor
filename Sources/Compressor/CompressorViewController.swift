@@ -22,6 +22,8 @@ open class CompressorViewController: TabmanViewController {
     private lazy var scrollObservationService = ScrollObservationService()
     internal lazy var autoInsetter = AutoInsetter()
     
+    public var compression: Compression = .default
+    
     // MARK: Lifecycle
 
     open override func loadView() {

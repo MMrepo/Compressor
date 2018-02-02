@@ -17,6 +17,13 @@ internal extension CompressorViewController {
         }
         
         let headerHeight = headerView.bounds.height
-        headerTopPin.constant = min(-(headerHeight + scrollOffset.y), 0.0)
+        let offsetTopPin = -(headerHeight + scrollOffset.y)
+        let limitedTopPin = max(offsetTopPin, maximumHeaderTopPin(for: compression.boundary))
+        print(limitedTopPin)
+        headerTopPin.constant = min(limitedTopPin, 0.0)
+    }
+    
+    private func maximumHeaderTopPin(for boundary: Compression.Boundary) -> CGFloat {
+        return 20
     }
 }
