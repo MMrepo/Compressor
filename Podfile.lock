@@ -1,25 +1,25 @@
 PODS:
   - AutoInsetter (1.2.1)
   - Listenable (2.0.0)
-  - Pageboy (2.3.4)
+  - Pageboy (2.4.0)
   - PureLayout (3.0.2)
-  - Tabman (1.5.2):
+  - Tabman (1.6.0):
     - AutoInsetter (~> 1.2.0)
-    - Pageboy (~> 2.3.0)
+    - Pageboy (~> 2.4.0)
 
 DEPENDENCIES:
   - AutoInsetter (~> 1.2.0)
   - Listenable (~> 2.0.0)
   - PureLayout (~> 3.0.0)
-  - Tabman (~> 1.5.0)
+  - Tabman (~> 1.6.0)
 
 SPEC CHECKSUMS:
   AutoInsetter: d90171b54341b801edd4ab68eee9eec54fdc92b7
   Listenable: 6dd6d417351e82f27fd267ef2e088bcda7735075
-  Pageboy: 502560f49b0357eaf8a3b6075e4cab29505079a3
+  Pageboy: b04cee5c1315a865fb49321129d12635e8465144
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  Tabman: 2018894ff75a6e1693729dbb40ab125393f9c5c1
+  Tabman: a9be97d1c75b4b7f40eec416021f614c4ccbb670
 
-PODFILE CHECKSUM: e4172e84105d3914af57740d5f16d0520fec2dce
+PODFILE CHECKSUM: 4a7ac94e94bbae11392289db6961600726bb381c
 
 COCOAPODS: 1.4.0
