@@ -4,9 +4,9 @@ workspace 'Compressor'
 
 def lib_pods
 
-  pod 'Tabman', '~> 1.6.0'
-  pod 'AutoInsetter', '~> 1.2.0'
-  pod 'Listenable', '~> 2.0.0'
+  pod 'Tabman', '~> 1.8'
+  pod 'AutoInsetter', '~> 1.2'
+  pod 'Listenable', '~> 2.0'
   pod 'PureLayout', '~> 3.0.0'
 
 end
